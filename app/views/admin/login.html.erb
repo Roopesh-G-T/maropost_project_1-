@@ -1,0 +1,33 @@
+
+<div class="field">
+<p style="color:red">
+<%= flash[:notice] %>
+</p>
+</div>
+</div>
+
+<h1> Admin Login </h1>
+
+<%= form_with url: "/admin/login", method: :post do |form| %>
+
+<div class="field">
+  <div class="col-auto">
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+</div>
+</div>
+
+<div class="field">
+  <div class="col-auto">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+</div>    
+</div>
+
+<div class="actions">
+    <div class="col-auto">
+    <%= form.submit "SUBMIT" %>
+    </div>
+</div>
+
+<% end %>
